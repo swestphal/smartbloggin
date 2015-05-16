@@ -8,11 +8,11 @@
 get_header(); ?>
 <p>single.php</p>
 <div id="wrapper-inner">
-    <div id="wrapper-inner-container">
+    <div id="wrapper-inner-container" style="background:green;">
         <?php if (function_exists('nav_breadcrumb')) nav_breadcrumb(); ?>
 <!--        <div id="wrapper-inner-container-content">-->
 
-            <div id="primary" class="content-area">
+            <div id="primary" class="content-area" style="background:red;">
                 <main id="main" class="site-main" role="main">
 
                     <?php while ( have_posts() ) : the_post(); ?>
@@ -36,6 +36,6 @@ get_header(); ?>
 
         </div>
     </div>
-</div>
- <?php get_sidebar(); ?>
+
+<!-- <?php //get_sidebar(); ?> -->
 <?php get_footer(); ?>
