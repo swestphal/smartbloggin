@@ -762,8 +762,14 @@ ul#menu-social {
 
 ul#menu-social li {
     float: right;
-    display:inline-block;
-    padding-left:10px;
+    box-shadow: 1px 1px 1px #fff;
+    display: inline-block;
+    padding-left: 7px;
+    margin-left: 3px;
+    background: #9d9d9d;
+    border-radius: 19px;
+    width: 35px;
+    height: 35px;
 }
 
 
@@ -775,11 +781,14 @@ ul#menu-social li a:before{
     vertical-align:bottom;
     display:inline-block;
     content:'\f0c0';
-    text-shadow: 1px 1px 1px #9d9d9d;
+    /*text-shadow: 1px 1px 1px #9d9d9d;*/
 }
 
-ul#menu-social li a:hover:before {
-    color: #fab87f;
+ul#menu-social li:hover{
+   background:#5e9fa3;
+    border-radius: 19px;
+    width: 35px;
+    height: 35px;
 }
 
 #menu-social li a[href*="facebook"]::before {content:'\f09a';}
