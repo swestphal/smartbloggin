@@ -56,8 +56,8 @@ function the_post_navigation() {
 		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'marie' ); ?></h2>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
-				next_post_link( '<div class="nav-next">%link</div>', '%title' );
+				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">'. _x('Previous Post:','Previous post','marie').'</div><h5>%link</h5></div>', '%title' );
+				next_post_link( '<div class="nav-next"><div class="nav-indicator">'. _x('Next Post:','Next post','marie') . '</div><h5>%link</h5></div>', '%title' );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->

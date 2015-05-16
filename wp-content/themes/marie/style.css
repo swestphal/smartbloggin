@@ -724,15 +724,20 @@ li a{
 .site-main .posts-navigation,
 .site-main .post-navigation {
 	overflow: none;
-    font-size:12px;
+    font-size:11px;
+}
+
+.site-main .comment-navigation span:first-child,
+.site-main .posts-navigation span:first-child,
+.site-main .post-navigation span:first-child {
+    display: block;
+    font-weight:bold;
 }
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
 	float: left;
-
-
     display:inline-block;
 }
 
@@ -741,7 +746,6 @@ li a{
 .post-navigation .nav-next {
 	float: right;
 	text-align: right;
-
 	display: inline-block;
 	padding-right:5%;
 }
