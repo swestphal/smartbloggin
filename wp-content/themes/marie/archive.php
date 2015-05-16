@@ -9,8 +9,7 @@
 
 get_header(); ?>
 <p>archive</p>
-<div id="wrapper-inner">
-    <div id="wrapper-inner-container">
+
         <?php if (function_exists('nav_breadcrumb')) nav_breadcrumb(); ?>
         <div id="wrapper-inner-container-content">
 
@@ -53,6 +52,5 @@ get_header(); ?>
         <div id="wrapper-inner-container-sidebar">
             <?php get_sidebar(); ?>
         </div><!-- #wrapper-inner-container-sidebar -->
-    </div><!-- #wrapper-inner-container -->
-</div><!-- #wrapper-inner -->
+
 <?php get_footer(); ?>

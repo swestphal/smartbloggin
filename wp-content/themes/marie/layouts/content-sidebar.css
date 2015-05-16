@@ -3,41 +3,30 @@ Theme Name: Marie
 Layout: Content-Sidebar
 */
 
-#wrapper {
-    max-width: 100%;
-    width:100%;
-}
 
-#wrapper-inner {
-}
-
-#wrapper-inner-container {
-    margin: 0 auto;
-    max-width: 960px;
-}
-
-#wrapper-inner-container-content {
+#main {
     width: 65.27%;
     float: left;
 }
 
-#wrapper-inner-container-sidebar {
-    width: 30.555%;
-    float: right;
+
+.content-area {
+
+}
+
+#content {
+    max-width: 960px;
+    width:100%;
+    margin:0 auto;
 }
 
 
-
-.site-main {
-
-}
 .site-content .widget-area {
-    /*background:#f5f5f5;*/
-	/*float: right;*/
-	/*overflow: hidden;*/
-	/*width: 380px;*/
-	/*padding:4rem;*/
-	/*float:right;*/
+
+	float: right;
+	overflow: hidden;
+	width: 240px;
+
 }
 .site-footer {
 	clear: both;
@@ -61,23 +50,18 @@ Layout: Content-Sidebar
 }
 
 @media screen and (min-width: 769px) {
-    /*.content-area {*/
-        /*float: left;*/
-        /*margin-left: -380px;*/
-        /*padding-left: 380px;*/
-        /*width: 100%;*/
-    /*}*/
+
 }
 
 @media screen and (max-width: 980px) {
-    #wrapper-inner-container-content {
+    .site-content .content-area {
        width:100%;
     }
-    #wrapper-inner-container-sidebar {
+    .site-content .widget-area {
         width: 100%;
     }
 
-    #wrapper {
+    #content {
         padding: 0 1em;
     }
 }

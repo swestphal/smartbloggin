@@ -6,36 +6,30 @@
  */
 
 get_header(); ?>
-<p>single.php</p>
-<div id="wrapper-inner">
-    <div id="wrapper-inner-container" style="background:green;">
-        <?php if (function_exists('nav_breadcrumb')) nav_breadcrumb(); ?>
-<!--        <div id="wrapper-inner-container-content">-->
 
-            <div id="primary" class="content-area" style="background:red;">
-                <main id="main" class="site-main" role="main">
-
-                    <?php while ( have_posts() ) : the_post(); ?>
-
-                        <?php get_template_part( 'template-parts/content', 'single' ); ?>
-
-                        <?php the_post_navigation(); ?>
-
-                        <?php
-                            // If comments are open or we have at least one comment, load up the comment template
-                            if ( comments_open() || get_comments_number() ) :
-                                comments_template();
-                            endif;
-                        ?>
+<?php if (function_exists('nav_breadcrumb')) nav_breadcrumb(); ?>
 
 
-                    <?php endwhile; // end of the loop. ?>
+<div id="primary" class="content-area clear" >
+    <main id="main" class="site-main" role="main">
 
-                </main><!-- #main -->
-            </div><!-- #primary -->
+        <?php while ( have_posts() ) : the_post(); ?>
 
-        </div>
-    </div>
+            <?php get_template_part( 'template-parts/content', 'single' ); ?>
 
-<!-- <?php //get_sidebar(); ?> -->
+            <?php the_post_navigation(); ?>
+
+            <?php
+                // If comments are open or we have at least one comment, load up the comment template
+                if ( comments_open() || get_comments_number() ) :
+                    comments_template();
+                endif;
+            ?>
+
+
+        <?php endwhile; // end of the loop. ?>
+
+    </main><!-- #main -->
+    <?php get_sidebar(); ?>
+</div><!-- #primary -->
 <?php get_footer(); ?>

@@ -17,10 +17,6 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="wrapper-inner">
-    <div id="wrapper-inner-container">
-        <div id="wrapper-inner-container-content">
-
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
@@ -79,6 +75,3 @@ if ( post_password_required() ) {
 	<?php comment_form(); ?>
 
 <!-- #comments -->
-</div>
-</div>
-</div>
