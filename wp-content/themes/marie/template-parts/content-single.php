@@ -3,6 +3,7 @@
  * @package Marie
  */
 ?>
+<p> content-single.php</p>
 <div id="wrapper-inner">
     <div id="wrapper-inner-container">
         <div id="wrapper-inner-container-content">
@@ -34,5 +35,5 @@
     </div><!-- #wrapper-inner-container-sidebar -->
 <!--        <footer class="entry-footer">-->
 <!--            --><?php //edit_post_link( esc_html__( 'Edit', 'marie' ), '<span class="edit-link">', '</span>' ); ?>
-<!--        </footer>.entry-footer -->
+<!--        </footer><!-- #entry-footer -->
 </div>

@@ -6,6 +6,7 @@
  */
 
 get_header(); ?>
+<p>single.php</p>
 <div id="wrapper-inner">
     <div id="wrapper-inner-container">
         <?php if (function_exists('nav_breadcrumb')) nav_breadcrumb(); ?>
@@ -26,6 +27,7 @@ get_header(); ?>
                                 comments_template();
                             endif;
                         ?>
+
 
                     <?php endwhile; // end of the loop. ?>
 

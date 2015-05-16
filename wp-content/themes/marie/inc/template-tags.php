@@ -70,28 +70,16 @@ if ( ! function_exists( 'marie_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function marie_posted_on() {
-	$time_string = '<time class="entry-date published updated" datetime="%2$s">%2$s<span class="date"></span></time>';
+	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s<span class="date"></span></time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
 
-	$time_year = sprintf( $time_string,
-		esc_attr( get_the_date( 'Y' ) ),
-		esc_html( get_the_date('Y') )
-	);
-    $time_month = sprintf( $time_string,
-        esc_attr( get_the_date( 'M' ) ),
-        esc_html( get_the_date('M') )
-    );
-    $time_day = sprintf( $time_string,
-        esc_attr( get_the_date( 'd' ) ),
-        esc_html( get_the_date('d') )
-    );
 
 	$posted_on = sprintf(
 		esc_html_x( '%s', 'post date', 'marie' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><i class="fa fa-clock-o fa-lg"></i><span>' . $time_day . '</span><span>' . $time_month . '</span><span>' . $time_year . '</span></a>'
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><i class="fa fa-clock-o fa-lg"></i><span class="day">' . get_the_date( 'd' ) .  '</span><span class="month">' . get_the_date('M') . '</span><span class="year">' . get_the_date('Y') . '</span></a>'
 	);
 
 	$byline = sprintf(
