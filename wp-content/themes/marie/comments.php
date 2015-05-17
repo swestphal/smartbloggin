@@ -23,41 +23,41 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 			<?php
 				printf( // WPCS: XSS OK
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'marie' ) ),
-					number_format_i18n( get_comments_number() ),
-					'<span>' . get_the_title() . '</span>'
+					esc_html( _nx( 'Ein Kommentar: ', '%1$s Kommentare', get_comments_number(), 'comments title', 'marie' ) ),
+					number_format_i18n( get_comments_number() )
 				);
 			?>
 		</h2>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'marie' ); ?></h2>
-			<div class="nav-links">
-
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'marie' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'marie' ) ); ?></div>
-
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // check for comment navigation ?>
+<!--		--><?php //if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+<!--		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">-->
+<!--			<h2 class="screen-reader-text">--><?php //esc_html_e( 'Comment navigation', 'marie' ); ?><!--</h2>-->
+<!--			<div class="nav-links">-->
+<!---->
+<!--				<div class="nav-previous">--><?php //previous_comments_link( esc_html__( 'Older Comments', 'marie' ) ); ?><!--</div>-->
+<!--				<div class="nav-next">--><?php //next_comments_link( esc_html__( 'Newer Comments', 'marie' ) ); ?><!--</div>-->
+<!---->
+<!--			</div><!-- .nav-links -->
+<!--		</nav><!-- #comment-nav-above -->
+<!--		--><?php //endif; // check for comment navigation ?>
 
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
 					'style'      => 'ol',
 					'short_ping' => true,
+                    'avatar_size' => 60,
 				) );
 			?>
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
+		<nav id="comment-nav-below" class="navigation comment-navigation " role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'marie' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'marie' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'marie' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Ältere Kommentare', 'marie' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Neuere Kommentare', 'marie' ) ); ?></div>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-below -->

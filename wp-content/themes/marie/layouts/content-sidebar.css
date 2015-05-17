@@ -64,5 +64,9 @@ Layout: Content-Sidebar
     #content {
         padding: 0 1em;
     }
+
+    #main {
+        width: 100%;
+    }
 }
 
