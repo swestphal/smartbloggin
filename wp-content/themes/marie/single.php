@@ -15,6 +15,11 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
         <?php while ( have_posts() ) : the_post(); ?>
+            <?php if (has_post_thumbnail()) {
+                echo '<div class="large-post-thumbnail">';
+                echo the_post_thumbnail('large');
+                echo '</div>';
+            }; ?>
 
             <?php get_template_part( 'template-parts/content', 'single' ); ?>
 

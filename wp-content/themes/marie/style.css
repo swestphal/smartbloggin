@@ -1006,6 +1006,10 @@ ul#menu-social li:hover{
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+
+#content {
+    padding-bottom: 4em;
+}
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -1044,6 +1048,9 @@ ul#menu-social li:hover{
     padding:0 2em 1em 0;
 }
 
+.large-post-thumbnail img {
+    display: inline-block;
+}
 
 /*--------------------------------------------------------------
 ## Asides
@@ -1378,7 +1385,7 @@ footer
 }
 
 .site-footer {
-
+    padding-top:4em;
     background-color: #ade4e0;
     /*font-family: "Open Sans", Helvetica, Arial, sans-serif;*/
     font-size: 15px;
@@ -1503,3 +1510,4 @@ footer
 #breadcrumb .current {
     color: #f87e7b;
 }
+

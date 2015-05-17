@@ -19,10 +19,12 @@
     </header><!-- .entry-header -->
 
     <div class="entry-content">
+
         <?php if (has_post_thumbnail()) {
                 echo '<div class="index-post-thumbnail">';
+                echo '<a href="'. get_permalink() . '" title="' . __('Mehr erfahren ...','marie') .get_the_title() . '" rel="bookmark">';
                 echo the_post_thumbnail('index');
-                echo '</div>';
+                echo '</a></div>';
             };
         ?>
         <?php
