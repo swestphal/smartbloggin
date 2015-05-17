@@ -1,0 +1,73 @@
+/*
+Theme Name: Marie
+Layout: Content-Sidebar
+*/
+
+
+#main {
+    width: 100%;
+    float: left;
+    margin-top:2em;
+}
+
+
+.content-area {
+
+}
+
+#content {
+    max-width: 960px;
+    width:100%;
+    margin:0 auto;
+}
+
+
+.site-content .widget-area {
+
+	float: right;
+	overflow: hidden;
+	width: 240px;
+    margin-top:3.5em;
+}
+.site-footer {
+	clear: both;
+	width: 100%;
+}
+
+
+/** Posts **/
+
+.entry-header,
+.entry-content,
+.entry-footer,
+.tag-links,
+.post-navigation,
+.comments-area,
+.paging-navigation {
+    position: relative;
+    /*max-width: 780px;*/
+    /*padding: 0 4rem;*/
+    /*margin: 0 auto;*/
+}
+
+@media screen and (min-width: 769px) {
+
+}
+
+@media screen and (max-width: 980px) {
+    .site-content .content-area {
+       width:100%;
+    }
+    .site-content .widget-area {
+        width: 100%;
+    }
+
+    #content {
+        padding: 0 1em;
+    }
+
+    #main {
+        width: 100%;
+    }
+}
+
