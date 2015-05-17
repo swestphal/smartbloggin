@@ -1026,6 +1026,13 @@ ul#menu-social li:hover{
 	margin: 0 0 1.5em;
 }
 
+.index-post-thumbnail img {
+    display: inline-block;
+    float:left;
+    padding:0 2em 1em 0;
+}
+
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
