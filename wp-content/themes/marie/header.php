@@ -23,7 +23,6 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-
 		    <div class="site-branding-inner">
                 <?php marie_social_menu(); ?>
                 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a></h1>

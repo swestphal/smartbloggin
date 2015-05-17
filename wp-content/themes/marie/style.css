@@ -286,7 +286,7 @@ h5,
 h6 {
     font-family:'Oswald', sans-serif;
     font-weight: lighter ;
-	clear: both;
+
 	color: #d1d484;
 	text-transform:uppercase;
 }
@@ -302,19 +302,23 @@ h1 a{
 }
 
 h1 {
-    font-size: 2.2827em
-}
-
-h2 {
-    font-size: 2.2827em;
-}
-
-h3 {
+    /*font-size: 2.2827em;*/
     font-size: 1.999em;
 }
 
+h2 {
+    font-size: 1.999em;
+    /*font-size: 2.2827em;*/
+}
+
+h3 {
+    /*font-size: 1.999em;*/
+    font-size: 1em;
+}
+
 h4 {
-    font-size: 1.414em;
+    /*font-size: 1.414em;*/
+    font-size: .707em;
 }
 
 h5 {
@@ -1320,7 +1324,7 @@ object {
 
 .site-branding {
     background-color: #ade4e0;
-    padding:30px 0;
+    padding:30px 0 0 0;
 
 }
 
@@ -1337,10 +1341,10 @@ h1.site-title a {
     margin:0 auto;
     background-image: url("smartbloggin_square_mint.gif");
     background-repeat: no-repeat;
-    background-size: 695px 249px ;
+    background-size: 63%;
     display:block;
     width:695px;
-    height:249px;
+    height:160px;
 }
 
 
