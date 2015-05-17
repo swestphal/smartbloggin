@@ -7,22 +7,20 @@
 
 get_header(); ?>
 
-<h1>404</h1>
-<div id="wrapper-inner">
-    <div id="wrapper-inner-container">
+
         <?php if (function_exists('nav_breadcrumb')) nav_breadcrumb(); ?>
-        <div id="wrapper-inner-container-content">
+
 
             <div id="primary" class="content-area">
                 <main id="main" class="site-main" role="main">
 
                     <section class="error-404 not-found">
                         <header class="page-header">
-                            <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'marie' ); ?></h1>
+                            <h1 class="page-title"><?php esc_html_e( 'Ups. Das habe ich nicht gefunden', 'marie' ); ?></h1>
                         </header><!-- .page-header -->
 
                         <div class="page-content">
-                            <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'marie' ); ?></p>
+                            <p><?php esc_html_e( 'Deine Suche hat keine Ergebnisse ergeben. Vielleicht ist hier etwas für Dich dabei ?', 'marie' ); ?></p>
 
                             <?php get_search_form(); ?>
 
@@ -30,7 +28,7 @@ get_header(); ?>
 
                             <?php if ( marie_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
                             <div class="widget widget_categories">
-                                <h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'marie' ); ?></h2>
+                                <h2 class="widget-title"><?php esc_html_e( 'Die beliebtesten Kategorien', 'marie' ); ?></h2>
                                 <ul>
                                 <?php
                                     wp_list_categories( array(
@@ -47,7 +45,7 @@ get_header(); ?>
 
                             <?php
                                 /* translators: %1$s: smiley */
-                                $archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'marie' ), convert_smilies( ':)' ) ) . '</p>';
+                                $archive_content = '<p>' . sprintf( esc_html__( 'Schau ins Monatsarchiv. %1$s', 'marie' ), convert_smilies( ':)' ) ) . '</p>';
                                 the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
                             ?>
 
@@ -57,12 +55,10 @@ get_header(); ?>
                     </section><!-- .error-404 -->
 
                 </main><!-- #main -->
+                <?php get_sidebar(); ?>
             </div><!-- #primary -->
 
-        </div>
-        <div id="wrapper-inner-container-sidebar">
-            <?php get_sidebar(); ?>
-        </div><!-- #wrapper-inner-container-sidebar -->
-    </div><!-- #wrapper-inner-container -->
-</div><!-- #wrapper-inner -->
+
+
+
 <?php get_footer(); ?>

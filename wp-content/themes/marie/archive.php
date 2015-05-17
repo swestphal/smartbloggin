@@ -8,8 +8,6 @@
  */
 
 get_header(); ?>
-<p>archive</p>
-
         <?php if (function_exists('nav_breadcrumb')) nav_breadcrumb(); ?>
         <div id="wrapper-inner-container-content">
 

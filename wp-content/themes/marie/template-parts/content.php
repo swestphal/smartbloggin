@@ -19,18 +19,19 @@
     </header><!-- .entry-header -->
 
     <div class="entry-content">
-    <?php if (has_post_thumbnail()) {
-            echo '<div class="index-post-thumbnail">';
-            echo the_post_thumbnail('index');
-            echo '</div>';
-        };
+        <?php if (has_post_thumbnail()) {
+                echo '<div class="index-post-thumbnail">';
+                echo the_post_thumbnail('index');
+                echo '</div>';
+            };
         ?>
         <?php
-            /* translators: %s: Name of current post */
-            the_content( sprintf(
-                wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'marie' ), array( 'span' => array( 'class' => array() ) ) ),
-                the_title( '<span class="screen-reader-text">"', '"</span>', false )
-            ) );
+//            /* translators: %s: Name of current post */
+//            the_content( sprintf(
+//                wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'marie' ), array( 'span' => array( 'class' => array() ) ) ),
+//                the_title( '<span class="screen-reader-text">"', '"</span>', false )
+//            ) );
+            the_excerpt()
         ?>
 
         <?php
@@ -39,10 +40,10 @@
                 'after'  => '</div>',
             ) );
         ?>
-    </div><!-- .entry-content -->
 
-<!--                <footer class="entry-footer">-->
-<!--                    --><?php //marie_entry_footer(); ?>
-<!--                </footer><!-- .entry-footer  -->
+    <footer class="entry-footer continue-reading">
+    <?php echo '<a href="'. get_permalink() . '" title="' . __('Weiterlesen ...','marie') .get_the_title() . '" rel="bookmark">Weiterlesen<i class="fa fa-file"></i></a>'; ?>
+    </footer><!-- .entry-footer -->
+    </div><!-- .entry-content -->
 </article><!-- #post-## -->
 

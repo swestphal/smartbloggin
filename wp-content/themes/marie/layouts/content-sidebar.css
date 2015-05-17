@@ -7,6 +7,7 @@ Layout: Content-Sidebar
 #main {
     width: 65.27%;
     float: left;
+    margin-top:2em;
 }
 
 
@@ -26,7 +27,7 @@ Layout: Content-Sidebar
 	float: right;
 	overflow: hidden;
 	width: 240px;
-
+    margin-top:3.5em;
 }
 .site-footer {
 	clear: both;

@@ -285,7 +285,7 @@ h4,
 h5,
 h6 {
     font-family:'Oswald', sans-serif;
-    font-weight: lighter;
+    font-weight: lighter ;
 	clear: both;
 	color: #d1d484;
 	text-transform:uppercase;
@@ -299,6 +299,10 @@ h5 a,
 h6 a,
 h1 a{
     text-decoration:none;
+}
+
+h1 {
+    font-size: 2.2827em
 }
 
 h2 {
@@ -332,6 +336,14 @@ cite,
 em,
 i {
 	font-style: italic;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    color: #9d9d9d;
 }
 
 blockquote {
@@ -945,7 +957,7 @@ ul#menu-social li:hover{
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 4em;
+	margin: 0 0 5em;
 
 }
 
@@ -1002,7 +1014,7 @@ ul#menu-social li:hover{
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 5em;
 }
 
 .byline,
@@ -1098,12 +1110,12 @@ ol.comment-list {
     padding:5px 8px;
     text-align:center;
 }
-.comment a.comment-reply-link:before {
+.comment a.comment-reply-link:after {
     content: "\21B5";
-    padding-right:8px;
+    padding-left:8px;
 }
 .comment .comment-reply-link {
-    font-size: 80%;
+    font-size: 14px;
 
 }
 
@@ -1405,6 +1417,13 @@ footer
       color:#9d9d9d;
 }
 
+.continue-reading {
+    font-size: 14px;
+}
+
+.continue-reading i {
+    padding-left: 8px
+}
 @media screen and (max-width:1129px) {
     div.entry-meta .posted-on a {
         text-decoration: none;
@@ -1466,5 +1485,21 @@ footer
     -webkit-border-radius: 30px 30px 0 0;
     -moz-border-radius:30px 30px 0 0;
     -o-border-radius:30px 30px 0 0;
-};
+}
 
+#breadcrumb {
+    margin-top:2em;
+    font-size: 1.41em;
+    font-family: 'Oswald', sans-serif;
+}
+
+#breadcrumb a {
+    color: #9d9d9d;
+}
+
+#breadcrumb a:hover {
+    color: #fab87f;
+}
+#breadcrumb .current {
+    color: #f87e7b;
+}
