@@ -1366,15 +1366,18 @@ h1.site-title a {
         margin:0 auto;
         background-image: url("smartbloggin_round_mint.gif");
         background-repeat: no-repeat;
-        background-size: 239px 214px;
-        height:214px;
+        background-size: 80%;
+        height:180px;
         width:239px;
         display:block;
+        background-position:center;
     }
 
     .main-navigation li {
         padding: 0 10px;
     }
+
+    
 }
 
 

@@ -25,7 +25,9 @@
 		<div class="site-branding">
 		    <div class="site-branding-inner">
                 <?php marie_social_menu(); ?>
-                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a></h1>
+                <h1 class="site-title">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
+                </h1>
 		    	<h2 class="site-description"></h2>
 		    </div>
 		</div><!-- .site-branding -->
