@@ -12,11 +12,11 @@ Layout: Content-Sidebar
 
 
 .content-area {
-
+padding-left:65px;
 }
 
 #content {
-    max-width: 960px;
+    max-width: 1060px;
     width:100%;
     margin:0 auto;
 }
@@ -51,7 +51,9 @@ Layout: Content-Sidebar
 }
 
 @media screen and (min-width: 769px) {
-
+    #content {
+        padding: 0 1em;
+    }
 }
 
 @media screen and (max-width: 980px) {
@@ -71,3 +73,8 @@ Layout: Content-Sidebar
     }
 }
 
+@media screen and (max-width:1135px) {
+    .content-area {
+        padding: 0;
+    }
+}

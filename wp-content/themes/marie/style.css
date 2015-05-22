@@ -210,6 +210,7 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
+
 input {
 	line-height: normal;
 }
@@ -228,6 +229,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
 	-webkit-appearance: textfield;
 	box-sizing: content-box;
+	width:96%;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -273,7 +275,9 @@ input,
 select,
 textarea {
     font-family:'Open Sans', sans-serif;
-	color: #9d9d9d;
+    font-weight:300;
+	/*color: #9d9d9d;*/
+	color:#919194;
 	font-size: 18px;
     line-height: 1.5;
 }
@@ -287,7 +291,7 @@ h6 {
     font-family:'Oswald', sans-serif;
     font-weight: lighter ;
 
-	color: #d1d484;
+	color: #d1d483;
 	text-transform:uppercase;
 }
 
@@ -581,6 +585,38 @@ textarea {
 	width: 100%;
 }
 
+.mc4wp-form {
+
+}
+
+.mc4wp-success {
+    border: none;
+    background-color: #d1d483;
+    color:#7d9f96;
+}
+
+ .mc4wp-form input[type=submit] {
+    background: url("badge.png") no-repeat scroll 0 0 transparent;
+    background-size: 73px 73px;
+    background-position-x: right;
+    color: #5e9fa3;
+    cursor: pointer;
+    font-weight: bold;
+    height: 73px;
+    padding-bottom: 2px;
+    width: 73px;
+    font-size:.7em;
+    border:none;
+    text-shadow:none;
+    box-shadow:none;
+    display:inline-block;
+    float:right;
+}
+
+ .mc4wp-form input[type=submit]:hover {
+     background: url("badge_hover.png") no-repeat scroll 0 0 transparent;
+     background-size: 73px 73px;
+ }
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -592,7 +628,7 @@ a {
 }
 
 h2 a {
-    color: #f87e7b;
+    color: #d1d483;
 }
 
 /*a:visited {*/
@@ -622,6 +658,29 @@ li a{
     color: #9d9d9d;
 }
 
+
+.download-btn {
+    width: 250px;
+    padding : 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f87e7b;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family:"unkempt";
+    letter-spacing:.2em;
+    float:left;
+}
+
+.download-btn a:before{
+    content:"DOWNLOAD";
+    display:block;
+    font-weight:normal;
+}
+.download-btn a {
+    color: #fff;
+    font-weight:bold;
+}
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -644,7 +703,8 @@ li a{
 	list-style: none;
 	padding-left: 0;
 	padding-top:13px;
-    border-top: 2px solid 5e9fa3;
+    /*border-top: 2px solid #5e9fa3;*/
+    padding-left:.5em;
 }
 
 
@@ -988,7 +1048,6 @@ ul#menu-social li:hover{
 }
 
 
-
 .widget ul {
     list-style: none;
     margin:0;
@@ -1006,6 +1065,15 @@ ul#menu-social li:hover{
 .widget_search .search-submit {
 	display: none;
 }
+
+
+.widget_small_bio_widget img {
+    display: block;
+    max-width:150px;
+    margin:0 auto;
+}
+
+
 
 /*--------------------------------------------------------------
 # Content
@@ -1035,6 +1103,9 @@ ul#menu-social li:hover{
 	display: inline;
 }
 
+.page-header h2 {
+    color: #f87e7b;
+}
 .page-content,
 .entry-content,
 .entry-summary {
@@ -1119,7 +1190,7 @@ ol.comment-list {
 }
 
 .comment-awaiting-moderation {
-    background: #dad8a8;
+    background: #d1d483;
 
     padding:5px 8px;
     text-align:center;
@@ -1135,7 +1206,7 @@ ol.comment-list {
 
 
 .comment-author-swe {
-    background-color:#dad8a8;
+    background-color:#d1d483;
     border-radius:30px 0 0 0;
 }
 
@@ -1360,8 +1431,8 @@ h1.site-title a {
 }
 
 .menu {
-    max-width: 960px;
-    margin:0 auto;
+    max-width: 1060px;
+
 }
 
 @media screen and (max-width: 980px) {
@@ -1418,6 +1489,7 @@ footer
 
 .entry-header h2 {
     margin-bottom: 0;
+    color:#f87e7b;
 }
 
 .entry-meta {
@@ -1441,7 +1513,8 @@ footer
 .continue-reading i {
     padding-left: 8px
 }
-@media screen and (max-width:1129px) {
+@media screen and (max-width:1134px) {
+
     div.entry-meta .posted-on a {
         text-decoration: none;
         padding-right: 10px;
@@ -1454,15 +1527,17 @@ footer
     div.entry-meta .posted-on  span.day:after  {
         content: ".";
     }
+
 }
 
-@media screen and (min-width:1130px) {
+@media screen and (min-width:1135px) {
+
 
     div.entry-meta .posted-on {
         position: absolute;
         left: -70px;
         top: 0;
-        background: #dad8a8;
+        background: #d1d483;
         height: 47px;
         border-radius: 30px 30px 0 0;
         -webkit-border-radius: 30px 30px 0 0;
@@ -1506,19 +1581,22 @@ footer
 
 #breadcrumb {
     margin-top:2em;
-    font-size: 1.41em;
+    font-size: 1em;
     font-family: 'Oswald', sans-serif;
+    font-weight: lighter;
 }
 
-#breadcrumb a {
-    color: #9d9d9d;
+#breadcrumb  *{
+    /*color: #9d9d9d;*/
+    color:#c8c8c8;
 }
 
 #breadcrumb a:hover {
     color: #fab87f;
 }
 #breadcrumb .current {
-    color: #f87e7b;
+    border-bottom: 1px dotted #f87e7b;
+    color:#c8c8c8;
 }
 
 .site-info {

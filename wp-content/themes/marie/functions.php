@@ -124,7 +124,7 @@ add_action( 'widgets_init', 'marie_widgets_init' );
 // breadcrumb
 function nav_breadcrumb() {
 
-    $delimiter = '&raquo;';
+    $delimiter = '<span>/</span>';
     $home = 'Home';
     $before = '<span class="current">';
     $after = '</span>';
@@ -238,7 +238,7 @@ function marie_scripts() {
 //    } else {
         wp_enqueue_style('marie-style-content-sidebar', get_template_directory_uri() . '/layouts/content-sidebar.css');
 
-    wp_enqueue_style('marie-google-fonts', 'http://fonts.googleapis.com/css?family=Unkempt|Oswald|Open+Sans');
+    wp_enqueue_style('marie-google-fonts', 'http://fonts.googleapis.com/css?family=Unkempt|Oswald|Open+Sans:300');
 	wp_enqueue_style('marie-font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 	wp_enqueue_script( 'marie-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -278,3 +278,10 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+// Register and load the widget
+function wpb_load_widget() {
+    register_widget( 'small_bio_widget' );
+}
+add_action( 'widgets_init', 'wpb_load_widget' );
